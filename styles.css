@@ -88,7 +88,9 @@ body {
 }
 
 .cell.circle::before,
-.cell.circle::after {
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
     content: '';
     position: absolute;
     width: var(--mark-size);
@@ -97,14 +99,22 @@ body {
     border-radius: 50%;
 }
 
-.cell.circle::before {
+.cell.circle::before,
+.board.circle .cell:not(.x):not(.circle):hover::before
+ {
     width: var(--mark-size);
     height: var(--mark-size);
     background-color: black;
 }
 
-.cell.circle::after {
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after
+{
     width: calc(var(--mark-size) * .7);
     height: calc(var(--mark-size) * .7);
     background-color: white;
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    background-color: lightgrey;
 }
