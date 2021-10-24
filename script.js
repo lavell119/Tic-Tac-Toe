@@ -15,7 +15,7 @@ function handleClick(e) {
     //placeMark
     //Check for Win
     //Check for Draw
-    //Switch Turns
+    //SwitchTurns
 }
 
 function placeMark(cell, currentClass) {
